@@ -12,6 +12,8 @@
     import animate from './styles/animate.css'
     import StatusBar from './components/StatusBar';
 
+    import Home from './components/HomePage';
+
     export default {
         name: 'app',
         components: { StatusBar },
@@ -20,6 +22,12 @@
                 navStack: [],
                 orientation: 'forward'
             }
+        },
+
+        beforeCreate(){
+            var h = Home;
+            var router = this.$router;
+            router.push('/')
         },
 
         created(){

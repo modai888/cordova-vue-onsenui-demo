@@ -1,21 +1,12 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import HomePage from '@/components/HomePage';
-import SocizlBuzzPage from '@/components/SocialBuzz'
+import StackNavigator from '../navigation/StackNavigator';
 
-Vue.use(Router);
+import Home from '../components/HomePage.vue'
+import SocialBuzz from '../components/SocialBuzz.vue'
 
-export default new Router({
-    routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: HomePage
-        },
-        {
-            path: '/social-buzz',
-            name: 'socialBuzz',
-            component: SocizlBuzzPage
-        }
-    ]
-})
+export default StackNavigator({
+    Home,
+    SocialBuzz
+}, {
+    root: "Home"
+});

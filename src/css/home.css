@@ -1,0 +1,26 @@
+.gs-blur {
+  height: 244px;
+}
+
+.toolbar.toolbar--home.toolbar--transparent.toolbar--cover-content + .page__background + .page__content {
+  padding-top: 0;
+}
+
+.gs-blur__content {
+  padding-top: 64px;
+  /*display: flex;*/
+  text-align: center;
+}
+
+.gs-circle--logo {
+  display: inline-block;
+  margin-top: 10px;
+  box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.65);
+}
+
+.gs-circle--logo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}

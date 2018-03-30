@@ -1,0 +1,13 @@
+:root {
+    --toolbar-background-color: #ef3e29;
+    --toolbar-button-color: #fafafa;
+    --toolbar-text-color: #ffffff;
+    --toolbar-border-color: #b2b2b2;
+    /* ios */
+    --ios-statusbar-height: 20px;
+    --ios-navbar-height: 44px;
+
+    /* android */
+    --android-statusbar-height: 24px;
+    --android-navbar-height: 56px;
+}

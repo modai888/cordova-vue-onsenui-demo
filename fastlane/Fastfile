@@ -1,0 +1,117 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "----- 编译打包ios"
+  lane :release do
+    # add actions here: https://docs.fastlane.tools/actions
+    build_app(
+        scheme: "CordovaVueDemo",
+        build_path: "./build",
+        archive_path: "./build/test.xcarchive",
+        clean: true,
+        include_bitcode: false,
+        export_options: "./exportOptions.plist"
+    )
+  end
+
+  desc "----- cordova ios 开发环境 -- 初始化证书"
+  lane :ios_dev_cert do
+    cert(
+        development: true,
+        force: false,
+        username: "wangxuebo@gridsum.com",
+        team_id: "76M838UFVQ",
+        platform: "ios"
+    )
+
+    sigh(
+        adhoc: true,
+        team_id: "76M838UFVQ",
+        provisioning_name: "mediadissector-weex-demo-app",
+        ignore_profiles_with_different_name: true,
+        cert_id: "Z39D6A9DQ3",
+        filename: "mediadissector-weex-demo-app.mobileprovision",
+        platform: "ios",
+        readonly: true
+    )
+  end
+
+  lane :ios_dev_sigh do
+    sigh(
+        provisioning_name: "mediadissector-weex-demo-app",
+        ignore_profiles_with_different_name: true,
+        readonly: true
+    )
+  end
+
+
+  desc "----- cordova ios 开发环境打包"
+  lane :ios_dev do
+    cordova(
+        platform: "ios",
+        release: false,
+        device: true,
+        type: "development"
+    )
+
+    puts ENV['CORDOVA_IOS_RELEASE_BUILD_PATH']
+  end
+
+  desc "----- cordova ios 生产环境打包"
+  lane :ios_release do
+    # with build.json
+    cordova(
+        platform: "ios",
+        release: true,
+        device: true,
+        type: "enterprise"
+    )
+
+  end
+
+end
+
+
+
+# platform android
+platform :android do
+
+  desc "----- cordova android 测试环境打包"
+  lane :android_dev do
+      cordova(
+            platform: "android",
+            release: false,
+            device: true
+      )
+  end
+
+  desc "----- cordova android 生产环境打包"
+  lane :android_release do
+      cordova(
+            platform: "android",
+            release: true,
+            device: true,
+            keystore_path: './gridsum.keystore',
+            keystore_password: 'gridsum',
+            key_password: 'mediadissector',
+            keystore_alias: 'dasauto.mediadissector'
+      )
+  end
+
+  lane :dev do
+    npm run www
+
+  end
+
+end

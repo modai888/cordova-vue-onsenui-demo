@@ -1,0 +1,7 @@
+.button--danger {
+  background-color: var(--danger);
+
+  &:active {
+    background-color: var(--danger);
+  }
+}

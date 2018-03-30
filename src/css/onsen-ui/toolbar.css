@@ -1,0 +1,24 @@
+:root {
+    --ios-portrait-nav-height: calc(var(--ios-navbar-height) + var(--ios-statusbar-height));
+}
+
+/*@media (orientation: portrait) {*/
+/*html.ios .toolbar {*/
+/*height: var(--ios-portrait-nav-height);*/
+/*padding-top: var(--ios-statusbar-height);*/
+
+/*}*/
+
+/*html.ios .toolbar + .page__background,*/
+/*html.ios .toolbar + .page__background + .page__content {*/
+/*top: var(--ios-portrait-nav-height);*/
+/*}*/
+/*}*/
+
+@custom-media --landscape (orientation: landscape);
+@media (--landscape) {
+    .page[status-bar-fill] > .toolbar {
+        padding-top: 0;
+    }
+}
+

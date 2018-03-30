@@ -1,0 +1,18 @@
+{
+    "ios": {
+        "debug": {
+            "codeSignIdentity": "iPhone Developer: fei dai (Z39D6A9DQ3)",
+            "developmentTeam": "76M838UFVQ",
+            "provisioningProfile": "mediadissector-weex-demo-app",
+            "packageType": "development"
+        },
+        "release": {
+            "codeSignIdentity": "iPhone Distribution: Beijing Gridsum Technology Co., Ltd",
+            "developmentTeam": "76M838UFVQ",
+            "provisioningProfile": "mediadissector-weex-demo-app",
+            "packageType": "ad-hoc"
+        }
+    },
+    "android": {
+    }
+}

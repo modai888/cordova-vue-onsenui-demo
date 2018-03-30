@@ -1,0 +1,41 @@
+.tabbar--primary {
+  background-color: var(--primary);
+}
+
+.tabbar--primary__button {
+  color: #f0f0f0;
+
+  @nest :checked + & {
+    color: #fff;
+  }
+}
+
+.tabbar--primary__border {
+  background-color: #fff;
+}
+
+.tabbar--social__border {
+  &.tabbar--top__border {
+    height: 3px;
+    top: 0;
+    bottom: initial;
+  }
+}
+
+.tabbar--social__button {
+  &.tabbar--top__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .tabbar__icon {
+    font-size: inherit;
+
+    & + .tabbar__label {
+      font-size: inherit;
+      padding: 0 10px;
+    }
+  }
+
+}

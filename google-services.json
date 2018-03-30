@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "54416638509",
+    "firebase_url": "https://azurepushdemo-bc4f1.firebaseio.com",
+    "project_id": "azurepushdemo-bc4f1",
+    "storage_bucket": "azurepushdemo-bc4f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54416638509:android:df6c0e09cd0a98bc",
+        "android_client_info": {
+          "package_name": "com.gridsum.mediadissector.volvoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54416638509-loqpbh3ki2qgn2kpicll8h0376jfn2en.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtCMGUurE7NnqwphrnzblubZ1gBaEhmI8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54416638509:android:107997db1175290a",
+        "android_client_info": {
+          "package_name": "com.gridsum.mediadissector.weex.CordovaVueDemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54416638509-loqpbh3ki2qgn2kpicll8h0376jfn2en.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtCMGUurE7NnqwphrnzblubZ1gBaEhmI8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

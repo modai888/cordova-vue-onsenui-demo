@@ -1,0 +1,9 @@
+.ion-volvo:before {
+    content: '';
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background: url('../assets/volvo-logo.png') no-repeat;
+    background-size: contain;
+    vertical-align: text-bottom;
+}
